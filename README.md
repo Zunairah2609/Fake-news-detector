@@ -1,6 +1,8 @@
 A machine learning project that detects whether a news article is real or fake.
 Built with Python, scikit-learn, and Flask for the web interface.
 
+Live Demo: https://fake-news-detector-4-2rnl.onrender.com/
+
 Features
 - Pre-trained ML model (model.joblib + vectorizer.joblib)
 - Web interface using Flask (app.py)
@@ -29,9 +31,10 @@ News detector/
    - `python app.py`
    - Open http://127.0.0.1:5000
 
- Notes
+## Notes
 - `Data/` CSV files are large (>50MB). Consider using Git LFS for large files.
 - If model files are not present, you can include them as release assets or use Git LFS.
 
 Author
 Zunairah Fathima
+
