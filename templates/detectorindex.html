@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact It Out</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="background"></div> <!-- Background layer -->
+
+    <h1 class="title">FACT IT OUT.</h1>
+
+    <div class="card">
+        <form action="/predict" method="POST">
+            <textarea name="news" placeholder="Enter your text here..." required></textarea>
+            <br>
+            <button type="submit">Check</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="about-section">
+        <h2>How It Works</h2>
+        <p>
+            Fact It Out is a quick way to verify the truth behind the headlines.  
+            Simply paste a news article, statement, or headline into the box above, 
+            the ML model analyzes patterns, language, and credibility signals  
+            to determine whether the news is likely <i>real</i> or <i>fake</i>. <br> 
+            Fast, simple, and reliable.
+        </p>
+    </div>
+
+</body>
+</html>
